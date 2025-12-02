@@ -33,5 +33,11 @@ This is a modpack Containing
 6. Turn on the server and Activate the new modpack on yo launcher website
 
 
+To manually Trigger an event please use the below command in console once the server is running.
+```
+RampartGames_XmasEvent::triggerEventManually();
+```
+
+
  
 
