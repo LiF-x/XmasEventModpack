@@ -8,6 +8,12 @@ The events will start every hour.
 
 To Install this mod, ensure you have the LiFx FrameWork installed [Download here](https://lifxmod.com/)
 
+This is a modpack Containing
+- Events (new storage Containers) In LiFx Folder
+- Loot (Same mod used for knool loot system)
+- Xmas Mod ( This is the auto object spawner and removal system )
+
+
 ## Before you begin ensure your server is turned off
 
 1. To USE this modpack Locate your game servers route directory folder, Which is the same location your art.zip file and the games .exe is
