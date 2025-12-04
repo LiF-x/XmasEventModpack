@@ -1,5 +1,7 @@
 # LiFx Xmas Events
-![](http://lifeisfeudal.co.uk/uploads/xmasgift.gif)
+
+![](https://github.com/LiF-x/XmasEvent/xmasgift.gif)
+
 This mod has been made For Christmas!
 It Automatically spawns 50 christmas Gifts in the world and deletes after the 5 min event.
 The events will start every hour.
