@@ -10,12 +10,12 @@
 if (!isObject(RampartGames_XmasEvent)) {
     new ScriptObject(RampartGames_XmasEvent) { };
 }
-if (!isObject(RampartGames_XmasEventEventTick)) {
-    new ScriptObject(RampartGames_XmasEventEventTick) { };
+if (!isObject(XmasEventTick)) {
+    new ScriptObject(XmasEventTick) { };
 }
 
 $RampartGames::XmasEvent::DataPath = ($RampartGames::XmasEvent::DataPath $= "" ? filePath($Con::File) : $RampartGames::XmasEvent::DataPath);
-$RampartGames::XmasEvent::Enabled = true;
+$RampartGames::XmasEvent::EventEnabled = true;
 $RampartGames::XmasEvent::EventIntervalMs = 3600000; // 1 hour by default
 $RampartGames::XmasEvent::EventDurationMs = 300000;  // 5 minutes
 $RampartGames::XmasEvent::NumGifts = 50;
@@ -24,12 +24,14 @@ package RampartGames_XmasEvent {
 
     function RampartGames_XmasEvent::setup() {
         RampartGames_XmasEvent::cleanupSavedSpawns();
-
+        XmasEventTick::setProcessTicks($RampartGames::XmasEvent::EventEnabled);
         LiFx::registerCallback($LiFx::hooks::onPostInitCallbacks, startSpawn, RampartGames_XmasEvent);
         LiFx::registerCallback($LiFx::hooks::onPostInitCallbacks, loadSpawnList, RampartGames_XmasEvent);
+        LiFx::registerCallback($LiFx::hooks::onPostInitCallbacks, loadSpawnList, RampartGames_XmasEvent);
+        LiFx::registerCallback($LiFx::hooks::onStartCallbacks, OnstartActivation, RampartGames_XmasEvent);
     }
 
-    function RampartGames_XmasEventEventTick::onProcessTick(%this) {
+    function XmasEventTick::onProcessTick(%this) {
         // Schedule pre-event warnings
         %this.schedule($RampartGames::XmasEvent::EventIntervalMs - 180000, "sendWarning", 3);   // 3 min
         %this.schedule($RampartGames::XmasEvent::EventIntervalMs - 60000,  "sendWarning", 1);   // 1 min
@@ -42,17 +44,33 @@ package RampartGames_XmasEvent {
         %this.eventID = %this.schedule($RampartGames::XmasEvent::EventIntervalMs, onProcessTick);
     }
 
-    function RampartGames_XmasEventEventTick::sendWarning(%this, %minutes) {
+    function RampartGames_XmasEvent::OnstartActivation() {
+        echo("Onstart Xmas Event Triggered!");
+        // Cancel any automated scheduling to prevent double triggers
+        cancel(XmasEventTick.eventID);
+
+        %this = "XmasEventTick";
+
+        // Send warnings
+        %this.sendWarning(3);                 // 3 min
+        %this.schedule(120000, "sendWarning", 1);   // 1 min
+        %this.schedule(150000, "sendWarning", 0.5); // 30 sec
+
+        // Start event after 3 minutes
+        %this.schedule(180000, "startEventManual");
+    }
+
+    function XmasEventTick::sendWarning(%this, %minutes) {
         %msg = "<spop><spush><color:c6935f>Xmas Event starting in " @ (%minutes == 0.5 ? "30 seconds" : %minutes @ " minute(s)") @ "!<spop>";
         LiFxUtility::messageAll(2480, %msg);
     }
 
-    function RampartGames_XmasEventEventTick::setProcessTicks(%bool) {
+    function XmasEventTick::setProcessTicks(%bool) {
         if (%bool) {
-            %this = "RampartGames_XmasEventEventTick";
+            %this = "XmasEventTick";
             %this.eventID = %this.schedule($RampartGames::XmasEvent::EventIntervalMs, onProcessTick);
         } else {
-            cancel(RampartGames_XmasEventEventTick.eventID);
+            cancel(XmasEventTick.eventID);
         }
     }
 
@@ -79,9 +97,9 @@ package RampartGames_XmasEvent {
     function RampartGames_XmasEvent::triggerEventManually() {
         echo("Manual Xmas Event Triggered!");
         // Cancel any automated scheduling to prevent double triggers
-        cancel(RampartGames_XmasEventEventTick.eventID);
+        cancel(XmasEventTick.eventID);
 
-        %this = "RampartGames_XmasEventEventTick";
+        %this = "XmasEventTick";
 
         // Send warnings
         %this.sendWarning(3);                 // 3 min
@@ -92,10 +110,10 @@ package RampartGames_XmasEvent {
         %this.schedule(180000, "startEventManual");
     }
 
-    function RampartGames_XmasEventEventTick::startEventManual() {
+    function XmasEventTick::startEventManual() {
         RampartGames_XmasEvent::startEvent();
         // Resume automatic scheduling
-        RampartGames_XmasEventEventTick::setProcessTicks(true);
+        XmasEventTick::setProcessTicks(true);
     }
 
     function RampartGames_XmasEvent::triggerObjectspawn(%this, %num) {

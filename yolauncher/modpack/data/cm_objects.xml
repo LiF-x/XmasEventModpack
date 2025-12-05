@@ -26339,6 +26339,13 @@
                         <scale x="1" y="1" z="1" />
                     </shape>
                 </shapes>
+                <pointLights>
+                    <light>
+                        <prototype>bonfire_light</prototype>
+                        <offset x="0.0106749" y="-0.0264672" z="1.88772" />
+                        <radius>8</radius>
+                    </light>
+                </pointLights>
                  <soundEmitters>
                     <emitter>
                         <profile>ChristmasSound</profile>
