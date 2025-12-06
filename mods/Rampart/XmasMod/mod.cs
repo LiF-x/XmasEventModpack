@@ -17,8 +17,8 @@ if (!isObject(XmasEventTick)) {
 $RampartGames::XmasEvent::DataPath = ($RampartGames::XmasEvent::DataPath $= "" ? filePath($Con::File) : $RampartGames::XmasEvent::DataPath);
 $RampartGames::XmasEvent::EventEnabled = true;
 $RampartGames::XmasEvent::EventIntervalMs = 3600000; // 1 hour by default
-$RampartGames::XmasEvent::EventDurationMs = 300000;  // 5 minutes
-$RampartGames::XmasEvent::NumGifts = 50;
+$RampartGames::XmasEvent::EventDurationMs = 600000;  // 5 minutes
+$RampartGames::XmasEvent::NumGifts = 150;
 
 package RampartGames_XmasEvent {
 
@@ -32,16 +32,18 @@ package RampartGames_XmasEvent {
     }
 
     function XmasEventTick::onProcessTick(%this) {
+        %interval = $RampartGames::XmasEvent::EventIntervalMs;
+
         // Schedule pre-event warnings
-        %this.schedule($RampartGames::XmasEvent::EventIntervalMs - 180000, "sendWarning", 3);   // 3 min
-        %this.schedule($RampartGames::XmasEvent::EventIntervalMs - 60000,  "sendWarning", 1);   // 1 min
-        %this.schedule($RampartGames::XmasEvent::EventIntervalMs - 30000,  "sendWarning", 0.5); // 30 sec
+        %this.schedule(%interval - 180000, "sendWarning", 3);   // 3 min
+        %this.schedule(%interval - 60000,  "sendWarning", 1);   // 1 min
+        %this.schedule(%interval - 30000,  "sendWarning", 0.5); // 30 sec
 
-        // Start event at interval
-        %this.schedule($RampartGames::XmasEvent::EventIntervalMs, "startEvent");
+        // Start event **after countdown finishes**
+        %this.schedule(%interval, "startEventManual");
 
-        // Schedule next event tick
-        %this.eventID = %this.schedule($RampartGames::XmasEvent::EventIntervalMs, onProcessTick);
+        // Schedule next tick **only after this event ends**
+        %this.eventID = %this.schedule(%interval + $RampartGames::XmasEvent::EventDurationMs + 1000, onProcessTick);
     }
 
     function RampartGames_XmasEvent::OnstartActivation() {
@@ -76,11 +78,17 @@ package RampartGames_XmasEvent {
 
     function RampartGames_XmasEvent::startEvent() {
         echo("Xmas Event Started!");
-        LiFxUtility::messageAll(2480, "<spop><spush><color:c6935f>Xmas Event has started!<spop> Find the gifts!");
+
+        // Use global variables properly
+        %numGifts = $RampartGames::XmasEvent::NumGifts;
+        %durationMinutes = $RampartGames::XmasEvent::EventDurationMs / 60000;
+
+        // Send message with colors and line break
+        LiFxUtility::messageAll(2480, "<spop><spush><color:c6935f>Xmas Event has started!<spop><color:ffffff> Find the <color:c6935f>" @ %numGifts @ " gifts!<color:ffffff>\nYou have <color:c6935f>" @ %durationMinutes @ " minute(s)<color:ffffff> to loot all presents.<spop>");
 
         %this = "RampartGames_XmasEvent";
 
-        for (%i = 0; %i < $RampartGames::XmasEvent::NumGifts; %i++) {
+        for (%i = 0; %i < %numGifts; %i++) {
             %this.triggerObjectspawn(%i + 1);
         }
 
