@@ -25,7 +25,7 @@ This is a modpack containing
 
 ## Before you begin ensure your server is turned off
 
-1. To Use this modpack locate your game servers route directory folder, Which is the same location your art.zip file and the games .exe is
+1. To Use this modpack locate your game servers root directory folder, Which is the same location your art.zip file and the games .exe is
 
 2. Prepare the upload, It is assumed you followed the Prerequisite section
 - data (Warning make sure uploading these do not effect your current mods, copy over what you need from these files before uploading).
