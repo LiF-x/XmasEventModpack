@@ -33,9 +33,32 @@ This is a modpack Containing
 6. Turn on the server and Activate the new modpack on yo launcher website
 
 
-To manually Trigger an event please use the below command in console once the server is running.
+## Ingame Commands
+
+Start event with no timer
+```
+RampartGames_XmasEvent::startEvent();
+```
+Start event with timer
 ```
 RampartGames_XmasEvent::triggerEventManually();
+```
+End event deleting all boxes
+```
+RampartGames_XmasEvent::endEvent();
+```
+Cancel/Start the currently scheduled automatic cycle
+
+Prevent new cycles from being scheduled
+
+:arrow_right: This stops the event from automatically repeating, but it does not stop an event that is already in progress.
+
+true is for allowing schedule false is to stop it
+```
+XmasEventTick::setProcessTicks(true);
+```
+```
+XmasEventTick::setProcessTicks(true);
 ```
 
 
