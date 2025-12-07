@@ -25,10 +25,6 @@ package RampartGames_XmasEvent {
     function RampartGames_XmasEvent::setup() {
         RampartGames_XmasEvent::cleanupSavedSpawns();
         XmasEventTick::setProcessTicks($RampartGames::XmasEvent::EventEnabled);
-        LiFx::registerCallback($LiFx::hooks::onPostInitCallbacks, startSpawn, RampartGames_XmasEvent);
-        LiFx::registerCallback($LiFx::hooks::onPostInitCallbacks, loadSpawnList, RampartGames_XmasEvent);
-        LiFx::registerCallback($LiFx::hooks::onPostInitCallbacks, loadSpawnList, RampartGames_XmasEvent);
-        LiFx::registerCallback($LiFx::hooks::onStartCallbacks, OnstartActivation, RampartGames_XmasEvent);
     }
 
     function XmasEventTick::onProcessTick(%this) {
@@ -120,8 +116,6 @@ package RampartGames_XmasEvent {
 
     function XmasEventTick::startEventManual() {
         RampartGames_XmasEvent::startEvent();
-        // Resume automatic scheduling
-        XmasEventTick::setProcessTicks(true);
     }
 
     function RampartGames_XmasEvent::triggerObjectspawn(%this, %num) {
