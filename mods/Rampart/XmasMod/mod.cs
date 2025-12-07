@@ -44,18 +44,7 @@ package RampartGames_XmasEvent {
 
     function RampartGames_XmasEvent::OnstartActivation() {
         echo("Onstart Xmas Event Triggered!");
-        // Cancel any automated scheduling to prevent double triggers
-        cancel(XmasEventTick.eventID);
-
-        %this = "XmasEventTick";
-
-        // Send warnings
-        %this.sendWarning(3);                 // 3 min
-        %this.schedule(120000, "sendWarning", 1);   // 1 min
-        %this.schedule(150000, "sendWarning", 0.5); // 30 sec
-
-        // Start event after 3 minutes
-        %this.schedule(180000, "startEventManual");
+        XmasEventTick::setProcessTicks($RampartGames::XmasEvent::EventEnabled);
     }
 
     function XmasEventTick::sendWarning(%this, %minutes) {
