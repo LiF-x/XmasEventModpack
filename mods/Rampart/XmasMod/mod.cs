@@ -24,7 +24,7 @@ package RampartGames_XmasEvent {
 
     function RampartGames_XmasEvent::setup() {
         RampartGames_XmasEvent::cleanupSavedSpawns();
-        XmasEventTick::setProcessTicks($RampartGames::XmasEvent::EventEnabled);
+        LiFx::registerCallback($LiFx::hooks::onStartCallbacks, OnstartActivation, RampartGames_XmasEvent);
     }
 
     function XmasEventTick::onProcessTick(%this) {
