@@ -26,6 +26,10 @@ package RampartGames_XmasEvent {
         RampartGames_XmasEvent::cleanupSavedSpawns();
         LiFx::registerCallback($LiFx::hooks::onStartCallbacks, OnstartActivation, RampartGames_XmasEvent);
     }
+    
+    function RampartGames_XmasEvent::version() {
+        return "1.0.0";
+    }
 
     function XmasEventTick::onProcessTick(%this) {
         %interval = $RampartGames::XmasEvent::EventIntervalMs;
