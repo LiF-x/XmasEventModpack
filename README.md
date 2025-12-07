@@ -58,7 +58,7 @@ true is for allowing schedule false is to stop it
 XmasEventTick::setProcessTicks(true);
 ```
 ```
-XmasEventTick::setProcessTicks(true);
+XmasEventTick::setProcessTicks(false);
 ```
 
 
