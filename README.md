@@ -1,22 +1,29 @@
 # LiFx Xmas Events
 
 This mod has been made For Christmas!
-It Automatically spawns 50 christmas Gifts in the world and deletes after the 5 min event.
+It Automatically spawns 150 christmas Gifts in the world and deletes all gifts after the 10 min event.
 The events will start every hour.
+
+### Prerequisite
+If you already have the Loot mod installed for Knools.
+```diff
+- DO NOT DIRECTLY UPLOAD IN THIS CASE!
+```
+- Just edit the lines in your original one you have already installed to include the new objects/xmas gifts, the Object ID is 4093
 
 ### Installation Instructions
 
-To Install this mod, ensure you have the LiFx FrameWork installed [Download here](https://lifxmod.com/)
+To Install this mod, ensure you have the LiFx Framework installed [Download here](https://lifxmod.com/)
 
-This is a modpack Containing
-- Events (new storage Containers) In LiFx Folder
-- Loot (Same mod used for knool loot system)
-- Xmas Mod ( This is the auto object spawner and removal system )
+This is a modpack containing
+- Events (new storage containers) In LiFx Folder - This adds multiple new
+- Loot (same mod used for knool loot system)
+- Xmas Mod (this is the auto object spawner and removal system)
 
 
 ## Before you begin ensure your server is turned off
 
-1. To USE this modpack Locate your game servers route directory folder, Which is the same location your art.zip file and the games .exe is
+1. To Use this modpack locate your game servers route directory folder, Which is the same location your art.zip file and the games .exe is
 
 2. Upload the following 3 Folders to this folder and overwrite (save backups)
 - data (Warning make sure uploading these do not effect your current mods, copy over what you need from these files before uploading).
