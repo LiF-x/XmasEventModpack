@@ -1,0 +1,503 @@
+diff --git a/data/cm_objects.xml b/data/cm_objects.xml
+index 3097294..de8f21a 100755
+--- a/data/cm_objects.xml
++++ b/data/cm_objects.xml
+@@ -18853,10 +18853,117 @@
+         </states>
+     </object>
+ 
+-    <object id="1232" isUnflattenAllowed="1" rotationStep="1" defaultState="Complete" StreamingGroup="2" noRuins="1">
++    <object id="1232" isUnflattenAllowed="0" rotationStep="90" defaultState="Complete" StreamingGroup="3" StreamingWeight="3">
+     <!--name = Long_House-->
+         <lockedCells>
+-            <cell x="0" y="0" />
++                      <cell x="0" y="0" />
++          <cell x="0" y="1" />
++          <cell x="0" y="2" />
++          <cell x="0" y="3" />
++          <cell x="0" y="4" />
++          <cell x="0" y="-1" />
++          <cell x="0" y="-2" />
++          <cell x="-1" y="-1" />
++          <cell x="-1" y="-2" />
++          <cell x="-2" y="-1" />
++          <cell x="-2" y="-2" />
++          <cell x="-3" y="-1" />
++          <cell x="-3" y="-2" />
++          <cell x="-4" y="-1" />
++          <cell x="-4" y="-2" />
++          <cell x="-5" y="-1" />
++          <cell x="-5" y="-2" />
++          <cell x="-6" y="-1" />
++          <cell x="-6" y="-2" />
++          <cell x="-7" y="-1" />
++          <cell x="-7" y="-2" />
++          <cell x="-1" y="1" />
++          <cell x="-1" y="2" />
++          <cell x="-1" y="3" />
++          <cell x="-1" y="4" />
++          <cell x="-2" y="1" />
++          <cell x="-2" y="2" />
++          <cell x="-2" y="3" />
++          <cell x="-2" y="4" />
++          <cell x="-3" y="1" />
++          <cell x="-3" y="2" />
++          <cell x="-3" y="3" />
++          <cell x="-3" y="4" />
++          <cell x="-4" y="1" />
++          <cell x="-4" y="2" />
++          <cell x="-4" y="3" />
++          <cell x="-4" y="4" />
++          <cell x="-5" y="0" />
++          <cell x="-5" y="1" />
++          <cell x="-5" y="2" />
++          <cell x="-5" y="3" />
++          <cell x="-5" y="4" />
++          <cell x="-6" y="1" /> 
++          <cell x="-6" y="2" />
++          <cell x="-6" y="3" />
++          <cell x="-6" y="4" />
++          <cell x="-7" y="1" />
++          <cell x="-7" y="2" />
++          <cell x="-7" y="3" />
++          <cell x="-7" y="4" />
++          <cell x="1" y="-1" />
++          <cell x="1" y="-2" />
++          <cell x="2" y="-1" />
++          <cell x="2" y="-2" />
++          <cell x="3" y="-1" />
++          <cell x="3" y="-2" />
++          <cell x="4" y="-1" />
++          <cell x="4" y="-2" />
++          <cell x="5" y="-1" />
++          <cell x="5" y="-2" />
++          <cell x="6" y="-1" />
++          <cell x="6" y="-2" />
++          <cell x="7" y="-1" />
++          <cell x="7" y="-2" />
++          <cell x="-1" y="0" />
++          <cell x="-2" y="0" />
++          <cell x="-3" y="0" />
++          <cell x="-4" y="0" />
++          <cell x="-5" y="0" />
++          <cell x="-6" y="0" />
++          <cell x="-7" y="0" />
++          <cell x="-8" y="1" />
++          <cell x="-8" y="2" />
++          <cell x="-8" y="3" />
++          <cell x="-8" y="4" />
++          <cell x="8" y="-2" />
++          <cell x="1" y="0" />
++          <cell x="2" y="0" />
++          <cell x="3" y="0" />
++          <cell x="4" y="0" />
++          <cell x="5" y="0" />
++          <cell x="6" y="0" />
++          <cell x="7" y="0" />
++          <cell x="8" y="0" />
++          <cell x="1" y="1" />
++          <cell x="2" y="1" />
++          <cell x="3" y="1" />
++          <cell x="4" y="1" />
++          <cell x="5" y="1" />
++          <cell x="6" y="1" />
++          <cell x="7" y="1" />
++          <cell x="8" y="1" />
++          <cell x="1" y="2" />
++          <cell x="2" y="2" />
++          <cell x="3" y="2" />
++          <cell x="4" y="2" />
++          <cell x="5" y="2" />
++          <cell x="6" y="2" />
++          <cell x="7" y="2" />
++          <cell x="8" y="2" />
++          <cell x="1" y="3" />
++          <cell x="2" y="3" />
++          <cell x="3" y="3" />
++          <cell x="4" y="3" />
++          <cell x="5" y="3" />
++          <cell x="6" y="3" />
++          <cell x="7" y="3" />
++          <cell x="8" y="3" />
+         </lockedCells>
+         <states>
+             <state type="Complete">
+@@ -18872,7 +18979,7 @@
+             <state type="Incomplete">
+                 <shapes>
+                     <shape>
+-                        <shapeName>art/models/3d/construction/misc/newbieisland/long_house.dts</shapeName>
++                        <shapeName>art/models/3d/construction/storage/large_warehouse/large_warehouse_inc.dts</shapeName>
+                         <offset x="0" y="0" z="0" />
+                         <rot x="0" y="0" z="1" angle="0" />
+                         <scale x="1" y="1" z="1" />
+@@ -20431,7 +20538,7 @@
+             <cell x="0" y="0" />
+         </lockedCells>
+         <states>
+-            <state type="Complete">
++            <state type="Working">
+                 <shapes>
+                     <shape>
+                         <shapeName>art/models/3d/construction/lightning/elite_brazier/elite_brazier.dts</shapeName>
+@@ -20441,7 +20548,7 @@
+                     </shape>
+                 </shapes>
+             </state>
+-            <state type="Working">
++            <state type="Complete">
+                 <shapes>
+                     <shape>
+                         <shapeName>art/models/3d/construction/lightning/elite_brazier/elite_brazier.dts</shapeName>
+@@ -21977,9 +22084,10 @@
+                 </shapes>
+                 <soundEmitters>
+                     <emitter>
+-                        <event>Object_TowerBell_Mid</event>
++                        <event>Bell</event>
+                         <offset x="0" y="0" z="32.2" />
+                         <rot x="0" y="0" z="1" angle="0" />
++                        <radius>25</radius>
+                     </emitter>
+                 </soundEmitters>
+             </state>
+@@ -25818,10 +25926,12 @@
+                 </shapes>
+                 <soundEmitters>
+                     <emitter>
++                        <profile>BellTowerSound</profile>
+                         <event>Object_TowerBell_High</event>
+-                        <offset x="0" y="0" z="32.2" />
++                        <offset x="0" y="0" z="0" />
+                         <rot x="0" y="0" z="1" angle="0" />
+-                    </emitter>
++                        <radius>20</radius>
++                    </emitter>  
+                 </soundEmitters>
+             </state>
+         </states>
+@@ -26214,5 +26324,321 @@
+             </state>
+         </states>
+     </object>
+-
++<object id="2578" isUnflattenAllowed="1" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1">
++    <!--name = New Guild kit-->
++    <lockedCells>
++        <cell x="0" y="0" />
++    </lockedCells>
++    <states>
++        <state type="Complete">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/containers/chest/chest.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++        </state>
++        <state type="Damaged">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/containers/chest/chest.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++            <decals>
++                <decal>
++                    <datablock>ScorchRXDecal</datablock>
++                    <offset x="0.599261" y="0.765832" z="1.7135" />
++                    <normal x="-1.70299e-007" y="5.96047e-008" z="1" />
++                    <tangent x="-1" y="-3.63014e-022" z="-1.70299e-007" />
++                    <size>2</size>
++                </decal>
++                <decal>
++                    <datablock>ScorchRXDecal</datablock>
++                    <offset x="0.624819" y="0.939461" z="1.37968" />
++                    <normal x="0" y="1" z="-5.96047e-008" />
++                    <tangent x="0" y="-5.96047e-008" z="-1" />
++                    <size>2</size>
++                </decal>
++            </decals>
++        </state>
++        <state type="Incomplete">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/misc/site/site.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++        </state>
++    </states>
++</object>
++<object id="2579" isUnflattenAllowed="1" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1">
++    <!--name = New Joiner kit-->
++    <lockedCells>
++        <cell x="0" y="0" />
++    </lockedCells>
++    <states>
++        <state type="Complete">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/containers/chest/chest.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++        </state>
++        <state type="Damaged">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/containers/chest/chest.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++            <decals>
++                <decal>
++                    <datablock>ScorchRXDecal</datablock>
++                    <offset x="0.599261" y="0.765832" z="1.7135" />
++                    <normal x="-1.70299e-007" y="5.96047e-008" z="1" />
++                    <tangent x="-1" y="-3.63014e-022" z="-1.70299e-007" />
++                    <size>2</size>
++                </decal>
++                <decal>
++                    <datablock>ScorchRXDecal</datablock>
++                    <offset x="0.624819" y="0.939461" z="1.37968" />
++                    <normal x="0" y="1" z="-5.96047e-008" />
++                    <tangent x="0" y="-5.96047e-008" z="-1" />
++                    <size>2</size>
++                </decal>
++            </decals>
++        </state>
++        <state type="Incomplete">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/misc/site/site.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++        </state>
++    </states>
++</object>
++<object id="2580" isUnflattenAllowed="1" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1">
++    <!--name = New Event kit-->
++    <lockedCells>
++        <cell x="0" y="0" />
++    </lockedCells>
++    <states>
++        <state type="Complete">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/containers/chest/chest.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++        </state>
++        <state type="Damaged">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/containers/chest/chest.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++            <decals>
++                <decal>
++                    <datablock>ScorchRXDecal</datablock>
++                    <offset x="0.599261" y="0.765832" z="1.7135" />
++                    <normal x="-1.70299e-007" y="5.96047e-008" z="1" />
++                    <tangent x="-1" y="-3.63014e-022" z="-1.70299e-007" />
++                    <size>2</size>
++                </decal>
++                <decal>
++                    <datablock>ScorchRXDecal</datablock>
++                    <offset x="0.624819" y="0.939461" z="1.37968" />
++                    <normal x="0" y="1" z="-5.96047e-008" />
++                    <tangent x="0" y="-5.96047e-008" z="-1" />
++                    <size>2</size>
++                </decal>
++            </decals>
++        </state>
++        <state type="Incomplete">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/misc/site/site.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++        </state>
++    </states>
++</object>
++<object id="2584" isUnflattenAllowed="1" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1">
++    <!--name = Believer kit-->
++    <lockedCells>
++        <cell x="0" y="0" />
++    </lockedCells>
++    <states>
++        <state type="Complete">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/containers/chest/chest.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++        </state>
++        <state type="Damaged">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/containers/chest/chest.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++            <decals>
++                <decal>
++                    <datablock>ScorchRXDecal</datablock>
++                    <offset x="0.599261" y="0.765832" z="1.7135" />
++                    <normal x="-1.70299e-007" y="5.96047e-008" z="1" />
++                    <tangent x="-1" y="-3.63014e-022" z="-1.70299e-007" />
++                    <size>2</size>
++                </decal>
++                <decal>
++                    <datablock>ScorchRXDecal</datablock>
++                    <offset x="0.624819" y="0.939461" z="1.37968" />
++                    <normal x="0" y="1" z="-5.96047e-008" />
++                    <tangent x="0" y="-5.96047e-008" z="-1" />
++                    <size>2</size>
++                </decal>
++            </decals>
++        </state>
++        <state type="Incomplete">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/misc/site/site.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++        </state>
++    </states>
++</object>
++<object id="2582" isUnflattenAllowed="1" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1">
++    <!--name = Cart kit-->
++    <lockedCells>
++        <cell x="0" y="0" />
++    </lockedCells>
++    <states>
++        <state type="Complete">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/containers/chest/chest.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++        </state>
++        <state type="Damaged">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/containers/chest/chest.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++            <decals>
++                <decal>
++                    <datablock>ScorchRXDecal</datablock>
++                    <offset x="0.599261" y="0.765832" z="1.7135" />
++                    <normal x="-1.70299e-007" y="5.96047e-008" z="1" />
++                    <tangent x="-1" y="-3.63014e-022" z="-1.70299e-007" />
++                    <size>2</size>
++                </decal>
++                <decal>
++                    <datablock>ScorchRXDecal</datablock>
++                    <offset x="0.624819" y="0.939461" z="1.37968" />
++                    <normal x="0" y="1" z="-5.96047e-008" />
++                    <tangent x="0" y="-5.96047e-008" z="-1" />
++                    <size>2</size>
++                </decal>
++            </decals>
++        </state>
++        <state type="Incomplete">
++            <shapes>
++                <shape>
++                    <shapeName>art/models/3d/construction/misc/site/site.dts</shapeName>
++                    <offset x="0" y="0" z="0" />
++                    <rot x="0" y="0" z="1" angle="0" />
++                    <scale x="1" y="1" z="1" />
++                </shape>
++            </shapes>
++        </state>
++    </states>
++</object>
++        <object id="4093" isUnflattenAllowed="1" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1">
++        <!--name = Xmas Prezzie-->
++        <lockedCells>
++            <cell x="0" y="0" />
++        </lockedCells>
++        <states>
++            <state type="Complete">
++                <shapes>
++                    <shape>
++                        <shapeName>yolauncher/modpack/mods/LiFx/eventloot/art/Models/3D/Storage/xmasgift.dts</shapeName>
++                        <offset x="0" y="0" z="0" />
++                        <rot x="0" y="0" z="1" angle="0" />
++                        <scale x="1" y="1" z="1" />
++                    </shape>
++                </shapes>
++            </state>
++            <state type="Incomplete">
++                <shapes>
++                    <shape>
++                        <shapeName>art/models/3d/construction/misc/site/site.dts</shapeName>
++                        <offset x="0" y="0" z="0" />
++                        <rot x="0" y="0" z="1" angle="0" />
++                        <scale x="1" y="1" z="1" />
++                    </shape>
++                </shapes>
++            </state>
++            <state type="Damaged">
++                <shapes>
++                    <shape>
++                        <shapeName>yolauncher/modpack/mods/LiFx/eventloot/art/Models/3D/Storage/xmasgift.dts</shapeName>
++                        <offset x="-0.00265551" y="0.562052" z="0.23829" />
++                        <rot x="-0.508628" y="-0.476423" z="0.717161" angle="1.8034" />
++                        <scale x="1" y="1" z="1" />
++                    </shape>
++                </shapes>
++                <decals>
++                    <decal>
++                        <datablock>ScorchRXDecal</datablock>
++                        <offset x="-0.197293" y="0.323386" z="0.841046" />
++                        <normal x="-0.409884" y="0.60453" z="0.683037" />
++                        <tangent x="-7.43629e-009" y="0.748831" z="-0.662761" />
++                        <size>1</size>
++                    </decal>
++                </decals>
++            </state>
++        </states>
++    </object>                                                    
+ </object_types>
+\ No newline at end of file
+
