@@ -22,7 +22,7 @@
     "dataPatches": [
       {
         "target": "data/cm_objects.xml",
-        "patch": "patches/cm_objects.patch"
+        "transform": "transforms/cm_objects.xdt.xml"
       }
     ]
   }
