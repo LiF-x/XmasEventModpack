@@ -7,22 +7,65 @@
   "authors": [
     "lif-x community"
   ],
-  "loadOrderHint": 100,
+  "source": {
+    "repo": "LiF-x/XmasEventModpack",
+    "commit": "9dcb32fd88e1e110916dc2b3d604a1a63e43205b"
+  },
+  "baseline": {
+    "gameBuild": "sha256:d47ef6156423f1226b6d07a1f31f81d3aa94bc460cc1ac76bcf7d7ef9c305d4a",
+    "steamBuildId": "11261643"
+  },
+  "license": "GPL-3.0-only",
+  "distribution": "hostable",
+  "dependencies": [
+    "LiF-x/ServerAutoloader",
+    "LiF-x/ClientAutoloader"
+  ],
+  "loadOrderHint": 300,
+  "loadOrderNote": "Content mod: registers new object types, so it loads after the framework and after plain behavioural mods.",
+  "objectTypeIds": {
+    "added": [
+      2578,
+      2579,
+      2580,
+      2582,
+      2584,
+      4093
+    ],
+    "modified": [
+      1232,
+      1633,
+      1671,
+      1733
+    ]
+  },
   "files": {
     "overlay": [
       {
-        "src": "mods/",
-        "dest": "mods/"
+        "src": "mods/LiFx/Events/",
+        "dest": "mods/LiFx/Events/"
       },
       {
-        "src": "yolauncher/modpack/mods/LiFx/",
-        "dest": "yolauncher/modpack/mods/LiFx/"
+        "src": "mods/LiFx/Loot/",
+        "dest": "mods/LiFx/Loot/"
+      },
+      {
+        "src": "mods/Rampart/XmasMod/",
+        "dest": "mods/Rampart/XmasMod/"
+      },
+      {
+        "src": "yolauncher/modpack/mods/LiFx/eventloot/",
+        "dest": "yolauncher/modpack/mods/LiFx/eventloot/"
+      },
+      {
+        "src": "yolauncher/modpack/mods/LiFx/xmasmod/",
+        "dest": "yolauncher/modpack/mods/LiFx/xmasmod/"
       }
     ],
     "dataPatches": [
       {
         "target": "data/cm_objects.xml",
-        "replace": "data/cm_objects.xml"
+        "transform": "transforms/cm_objects.xdt.xml"
       }
     ]
   }
