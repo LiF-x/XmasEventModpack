@@ -18,8 +18,9 @@
   "license": "GPL-3.0-only",
   "distribution": "hostable",
   "dependencies": [
-    "LiF-x/ServerAutoloader",
-    "LiF-x/ClientAutoloader"
+    "LiF-x/ClientAutoloader",
+    "LiF-x/Loot",
+    "LiF-x/ServerAutoloader"
   ],
   "loadOrderHint": 300,
   "loadOrderNote": "Content mod: registers new object types, so it loads after the framework and after plain behavioural mods.",
@@ -50,10 +51,6 @@
       {
         "src": "mods/LiFx/Events/",
         "dest": "mods/LiFx/Events/"
-      },
-      {
-        "src": "mods/LiFx/Loot/",
-        "dest": "mods/LiFx/Loot/"
       },
       {
         "src": "mods/Rampart/XmasMod/",
